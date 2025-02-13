@@ -5,10 +5,19 @@
     <RootNamespace />
     <AssemblyName>$(MSBuildProjectName)Library</AssemblyName>
     <OutputType>Exe</OutputType>
+    <Authors>Shaucky</Authors>
+    <NeutralLanguage>zh-CHS</NeutralLanguage>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3">
+      <GeneratePathProperty>False</GeneratePathProperty>
+    </PackageReference>
+    <None Update="packages\Newtonsoft.Json\13.0.3\lib\netstandard2.0\Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
